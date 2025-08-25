@@ -123,4 +123,26 @@ SELECT * FROM tt
 
 ---
 
-여기까지가 MySQL 공식문서 Subqueries (15.2.15) 번역 및 정리입니다.
+## 15.2.15.1 The Subquery as Scalar Operand
+
+스칼라 서브쿼리는 하나의 값만 반환하는 가장 단순한 형태의 서브쿼리입니다.
+단일 컬럼 값이나 리터럴이 올 수 있는 자리라면 어디든 사용할 수 있습니다.
+
+예시:
+~~~sql
+CREATE TABLE t1 (s1 INT, s2 CHAR(5) NOT NULL);
+INSERT INTO t1 VALUES(100, 'abcde');
+SELECT (SELECT s2 FROM t1);
+~~~
+
+이 쿼리는 'abcde'를 반환합니다.
+만약 t1이 비어있다면 결과는 NULL이 됩니다.
+
+스칼라 서브쿼리는 함수 인자에서도 사용할 수 있습니다:
+~~~sql
+SELECT UPPER((SELECT s1 FROM t1)) FROM t2;
+~~~
+
+## 15.2.15.2 Comparisons Using Subqueries
+
+가장 흔한 형태는 비교 연산자 오른쪽에 서브쿼리를 두는 방식입니다.
