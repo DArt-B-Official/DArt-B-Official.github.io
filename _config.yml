@@ -1,62 +1,56 @@
-# The Site Configuration
+# =========================
+# DArt-B GitHub Pages (Chirpy)
+# =========================
 
-# Import the theme
+# Import Chirpy theme (Gemfile에 jekyll-theme-chirpy 가 있어야 함)
 theme: jekyll-theme-chirpy
 
-# GitHub Pages 사용자 페이지( username.github.io )는 빈 값 유지
+# 사용자 페이지( <user>.github.io )는 빈 값 유지
 baseurl: ""
 
 # 언어/타임존
 lang: ko
 timezone: Asia/Seoul
 
-# jekyll-seo-tag settings
-# ↓ --------------------------
-title: DArt-B # 사이트 메인 타이틀
-tagline: "중앙대학교 데이터 분석학회" # 서브 타이틀
+# 포스트가 미래 시간이어도 표시 (예: KST로 작성했는데 UTC 기준 미래가 되는 문제 방지)
+future: true
+
+# ----- jekyll-seo-tag -----
+title: DArt-B
+tagline: "중앙대학교 데이터 분석학회"
 description: >-
   DArt-B 공식 Git 블로그
 
-# 사용자 페이지 URL (마지막 / 금지)
-url: "https://DArt-B-Official.github.io"
+# 사이트 루트 URL (끝에 / 금지)
+url: "https://dart-b-official.github.io"
 
 github:
   username: DArt-B-Official
 
-# 필요 시 나중에 트위터/블루스카이 등 추가
-# twitter:
-#   username: your_twitter
-
 social:
-  name: DArt_B (DArt-B-Official) # 저작권 표기/기본 글쓴이
+  name: DArt_B (DArt-B-Official)
   email: dartbofficial@naver.com
   links:
     - https://github.com/DArt-B-Official
     - https://www.instagram.com/dart_b_official/
     - https://blog.naver.com/dartbblog
+# ---------------------------
 
-# 사이트 소유 확인(선택)
+# (선택) 소유권 확인/애널리틱스 필요 시 채우기
 google_site_verification:
-# ↑ --------------------------
-# The end of `jekyll-seo-tag` settings
-
-# Google Analytics(선택)
 google_analytics:
-  id: # G-XXXXXXX 형식
+  id:
 
-# 페이지뷰 프록시 안 쓰면 비워둠
-# google_analytics.pv 는 생략
+# 라이트/다크 모드 (비우면 시스템 따라감)
+theme_mode: light # [light|dark]
 
-# 라이트/다크 모드
-theme_mode: light # [light|dark] 비우면 시스템 따라감
-
-# 사이드바 아바타 (로고 파일을 /assets/img/dartb.png 로 둔 경우 예시)
+# 사이드바 로고
 avatar: "/assets/img/dartb.png"
 
 # 글 목차
 toc: true
 
-# 댓글(원하면 나중에 셋업) — 지금은 비활성화
+# 댓글 비활성(원하면 나중에 설정)
 comments:
   active:
   disqus:
@@ -74,19 +68,12 @@ comments:
     lang:
     reactions_enabled:
 
-# 정적 에셋 셀프호스팅(옵션)
-assets:
-  self_host:
-    enabled:
-    env:
-
 # PWA
 pwa:
   enabled: true
 paginate: 50
 
-# ------------ The following options are not recommended to be modified ------------------
-
+# --------- 아래부터는 기본값 권장 ---------
 kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
