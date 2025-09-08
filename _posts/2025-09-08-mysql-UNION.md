@@ -9,7 +9,7 @@ tags: [MySQL, Subqueries, 공식문서, 번역]
 
 ## 15.2.18. Union Clause
 
-\> **원문 출처:** [MySQL 8.0 Reference Manual - 15.2.15 Subqueries](https://dev.mysql.com/doc/refman/8.0/en/subqueries.html)  
+\> **원문 출처:** [MySQL 8.0 Reference Manual - 15.2.14.SEt Operations](https://dev.mysql.com/doc/refman/8.0/en/set-operations.html)  
 
 \> **번역:** DArt-B 학회
 
